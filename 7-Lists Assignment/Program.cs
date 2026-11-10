@@ -378,7 +378,12 @@ namespace _7_Lists_Assignment
             };
 
             // Display the original list of vegetables
-            PrintVegetables(vegetables);
+            Console.WriteLine("Vegetables:");
+
+            for (int i = 0; i < vegetables.Count; i++)
+            {
+                Console.WriteLine((i + 1) + " - " + vegetables[i]);
+            }
 
             // Store the user's menu choice
             string choice = "";
@@ -535,33 +540,17 @@ namespace _7_Lists_Assignment
                 if (choice != "7")
                 {
                     Console.WriteLine();
-                    PrintVegetables(vegetables);
+                    Console.WriteLine("Vegetables:");
+
+                    for (int i = 0; i < vegetables.Count; i++)
+                    {
+                        Console.WriteLine((i + 1) + " - " + vegetables[i]);
+                    }
                 }
             }
         }
 
  
-        // METHOD - Print the vegetables
-        static void PrintVegetables(List<string> vegetables)
-        {
-            // Display the heading
-            Console.WriteLine("Vegetables");
-
-            // Check if the list is empty
-            if (vegetables.Count == 0)
-            {
-                Console.WriteLine("The list is empty.");
-            }
-            else
-            {
-                // Loop through the list and print each vegetable
-                // i + 1 makes the displayed numbering start at 1
-                // The actual indexes still start at 0
-                for (int i = 0; i < vegetables.Count; i++)
-                {
-                    Console.WriteLine((i + 1) + " - " + vegetables[i]);
-                }
-            }
-        }
+        
     }
 }
